@@ -3,16 +3,18 @@ endpoint urls into your WSO2 EI/MI code. This would be executed in
 the CI/CD process flow to migrate code from Dev -> Test -> UAT -> Prod. 
 
 Steps:
-1. Open WSO2 Integration Studio and create your endpoint.
+1. Open WSO2 Integration Studio and create your endpoint using the wizard.
 2. Create a project (or clone this one) structured like this one.
 3. Copy in the endpoint.xml file and change the address to be dynamic
 IE: :some-name-to-substitue
 4. Create the conf files for your environments.
+5. Delete your studio project if you no longer need it.
 
 Example mvn command:
 mvn clean install "-Denv=TEST"
 
 Result:
+<code>
 [INFO] Scanning for projects...
 [INFO]
 [INFO] ----------------< wso2.sampleHelloWorld:Demo-Endpoints >----------------
@@ -34,3 +36,4 @@ Result:
 [INFO] Total time:  3.414 s
 [INFO] Finished at: 2023-02-08T11:11:40-06:00
 [INFO] ------------------------------------------------------------------------
+</code>
