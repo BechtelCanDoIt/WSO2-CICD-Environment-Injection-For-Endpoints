@@ -40,17 +40,17 @@ Result:
 
 Example Injected Result from prod.conf file:
 <code>
-<?xml version="1.0" encoding="UTF-8"?>
-<endpoint name="DemoEP" xmlns="http://ws.apache.org/ns/synapse">
-    <http uri-template="http://PROD.company.com">
-        <suspendOnFailure>
-            <initialDuration>-1</initialDuration>
-            <progressionFactor>1.0</progressionFactor>
-        </suspendOnFailure>
-        <markForSuspension>
-            <errorCodes>-1</errorCodes>
-            <retriesBeforeSuspension>0</retriesBeforeSuspension>
-        </markForSuspension>
-    </http>
-</endpoint>
+\<?xml version="1.0" encoding="UTF-8"?\>
+\<endpoint name="DemoEP" xmlns="http://ws.apache.org/ns/synapse"\>
+   \<http uri-template="http://PROD.company.com"\>
+        \<suspendOnFailure\>
+           \<initialDuration\>-1\</initialDuration\>
+            \<progressionFactor\>1.0\</progressionFactor\>
+        \</suspendOnFailure\>
+        \<markForSuspension\>
+            \<errorCodes\>-1\</errorCodes\>
+            \<retriesBeforeSuspension\>0\</retriesBeforeSuspension\>
+        \</markForSuspension\>
+    \</http\>
+\</endpoint\>
 </code>
