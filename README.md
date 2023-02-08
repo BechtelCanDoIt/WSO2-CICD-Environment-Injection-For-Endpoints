@@ -11,7 +11,7 @@ IE: :some-name-to-substitue
 5. Delete your studio project if you no longer need it.
 
 Example mvn command:
-mvn clean install "-Denv=TEST"
+mvn clean install "-Denv=PROD"
 
 Result:
 <code>
@@ -36,4 +36,21 @@ Result:
 [INFO] Total time:  3.414 s
 [INFO] Finished at: 2023-02-08T11:11:40-06:00
 [INFO] ------------------------------------------------------------------------
+</code>
+
+Example Injected Result from prod.conf file:
+<code>
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="DemoEP" xmlns="http://ws.apache.org/ns/synapse">
+    <http uri-template="http://PROD.company.com">
+        <suspendOnFailure>
+            <initialDuration>-1</initialDuration>
+            <progressionFactor>1.0</progressionFactor>
+        </suspendOnFailure>
+        <markForSuspension>
+            <errorCodes>-1</errorCodes>
+            <retriesBeforeSuspension>0</retriesBeforeSuspension>
+        </markForSuspension>
+    </http>
+</endpoint>
 </code>
