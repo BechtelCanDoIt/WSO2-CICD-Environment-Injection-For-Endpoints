@@ -13,7 +13,6 @@ Example mvn command:
 mvn clean install "-Denv=TEST"
 
 Result:
----
 [INFO] Scanning for projects...
 [INFO]
 [INFO] ----------------< wso2.sampleHelloWorld:Demo-Endpoints >----------------
@@ -35,4 +34,3 @@ Result:
 [INFO] Total time:  3.414 s
 [INFO] Finished at: 2023-02-08T11:11:40-06:00
 [INFO] ------------------------------------------------------------------------
----
